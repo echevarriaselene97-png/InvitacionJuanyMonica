@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Invitación a la boda de Juan y Mónica">
+<title>Juan &amp; Mónica | Invitación de boda</title>
+<link rel="stylesheet" href="globals.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="iphone">
+<header>
+<p class="text-wrapper">Estás invitado a la boda de</p>
+<h1 class="juan-m-nica">Juan &amp; Mónica</h1>
+<img class="element" src="img/1recurso-5-1.png" alt="">
+<img class="element-recurso" src="img/1recurso-6-1.png" alt="">
+<img class="img" src="img/1recurso-6-3.png" alt="">
+<img class="element-2" src="img/1recurso-6-2.png" alt="">
+<img class="element-40" src="img/1recurso-2-1.png" alt="">
+</header>
+<section aria-labelledby="story-heading">
+<h2 id="story-heading" class="despu-s-de-a-os">
+Después de 27 años compartiendo <br>
+la vida, hoy celebramos la suerte <br>
+de seguir escribiéndola juntos.
+      </h2>
+<img class="element-3" src="img/1recurso-1-1.png" alt="">
+<img class="element-4" src="img/1recurso-6-4.png" alt="">
+<img class="element-5" src="img/1recurso-6-7.png" alt="">
+<img class="element-6" src="img/1recurso-6-5.png" alt="">
+<img class="element-7" src="img/1recurso-6-8-2.png" alt="">
+<img class="element-8" src="img/1recurso-6-6.png" alt="">
+<img class="element-9" src="img/1recurso-6-9.png" alt="">
+<img class="element-10" src="img/1recurso-5-1-3.png" alt="">
+</section>
+<section aria-labelledby="event-heading">
+<h2 id="event-heading" class="div">
+<time datetime="2026-12-19">Diciembre 19, 2026</time>
+</h2>
+<img class="element-calendario" src="img/1calendario-1.png" alt="">
+<p class="text-wrapper-2">
+<time datetime="22:00">22 horas</time>
+</p>
+<img class="element-reloj" src="img/1reloj-1-1.png" alt="">
+<address class="text-wrapper-3">Salón “Las Farolas”</address>
+<img class="element-unicacion" src="img/1unicacion-1.png" alt="">
+<img class="element-25" src="img/1recurso-5-2.png" alt="">
+<img class="element-mapa" src="img/1mapa-1.png" alt="Mapa de ubicación del Salón Las Farolas">
+</section>
+<section aria-labelledby="gift-heading">
+<h2 id="gift-heading" class="text-wrapper-5">¿Qué nos podes regalar?</h2>
+<div class="element-regaloo" aria-hidden="true"></div>
+<img class="element-11" src="img/1recurso-6-4-2.png" alt="">
+<img class="element-12" src="img/1recurso-6-10-2.png" alt="">
+<img class="element-13" src="img/1recurso-6-5-2.png" alt="">
+<img class="element-14" src="img/1recurso-6-11-2.png" alt="">
+<img class="element-15" src="img/1recurso-6-6-2.png" alt="">
+<img class="element-16" src="img/1recurso-6-12.png" alt="">
+<img class="element-17" src="img/1recurso-6-7-3.png" alt="">
+<img class="element-18" src="img/1recurso-6-13-2.png" alt="">
+<img class="element-19" src="img/1recurso-6-8.png" alt="">
+<img class="element-20" src="img/1recurso-6-14.png" alt="">
+<img class="element-21" src="img/1recurso-5-1-4.png" alt="">
+<img class="element-22" src="img/1recurso-5-3.png" alt="">
+<img class="element-23" src="img/1recurso-5-2-3.png" alt="">
+<img class="element-24" src="img/1recurso-5-4-2.png" alt="">
+</section>
+<section aria-labelledby="rsvp-heading">
+<a
+        class="element-whatsapp"
+        href="https://wa.me/5493434736641"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Confirmar asistencia por WhatsApp"
+      ></a>
+<p id="rsvp-heading" class="confirma-tu">
+<span class="span">
+Confirma tu asistencia <br>
+hasta el
+        </span>
+<span class="text-wrapper-4">30 de Octubre</span>
+</p>
+</section>
+<footer aria-labelledby="closing-heading">
+<h2 id="closing-heading" class="text-wrapper-6">¡Te esperamos!</h2>
+<img class="element-copitas" src="img/1copitas-1.png" alt="">
+<img class="element-26" src="img/1recurso-6-4-3.png" alt="">
+<img class="element-27" src="img/image.png" alt="">
+<img class="element-28" src="img/1recurso-6-6-3.png" alt="">
+<img class="element-29" src="img/1recurso-6-7-2.png" alt="">
+<img class="element-30" src="img/1recurso-6-8-3.png" alt="">
+<img class="element-31" src="img/1recurso-5-1-2.png" alt="">
+<img class="element-32" src="img/1recurso-5-2-2.png" alt="">
+<img class="element-33" src="img/1recurso-6-10.png" alt="">
+<img class="element-34" src="img/1recurso-6-11.png" alt="">
+<img class="element-35" src="img/1recurso-6-12-2.png" alt="">
+<img class="element-36" src="img/1recurso-6-13.png" alt="">
+<img class="element-37" src="img/1recurso-6-14-2.png" alt="">
+<img class="element-38" src="img/1recurso-5-3-2.png" alt="">
+<img class="element-39" src="img/1recurso-5-4.png" alt="">
+</footer>
+</main>
+</body>
+</html>
