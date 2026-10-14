@@ -12,36 +12,54 @@
   margin: 0 auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 }
-/* 1. Texto superior de bienvenida */
+/* =========================================================
+   COMPOSICIÓN EXACTA DE LA PORTADA
+   ========================================================= */
+
+/* 1. "Estás invitado a la boda de" (mantiene Bodoni Moda Italic) */
 .iphone header .text-wrapper,
 .iphone .text-wrapper {
   position: absolute !important;
-  top: 175px !important; /* Lo ubica más arriba, dejando respirar la cabecera */
+  top: 350px !important; /* Baja hacia la zona media */
   left: 0 !important;
   width: 100% !important;
   text-align: center !important;
+  font-family: "Bodoni Moda-BoldItalic", "Bodoni Moda", serif !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  color: #333399 !important;
   margin: 0 !important;
-  z-index: 15 !important;
+  z-index: 10 !important;
 }
 
-/* 2. Título de los novios en Great Vibes */
+/* 2. "Juan & Mónica" en Great Vibes (inmediatamente debajo) */
 .iphone .juan-m-nica,
 h1.juan-m-nica {
   position: absolute !important;
-  top: 235px !important; /* Desciende justo debajo de la frase sin pisar el tractor */
+  top: 385px !important; /* Queda justo a 35px del texto anterior */
   left: 0 !important;
   right: 0 !important;
   width: 100% !important;
   white-space: nowrap !important;
   font-family: "Great Vibes", cursive !important;
   font-weight: 400 !important;
-  font-size: 40px !important;
+  font-size: 42px !important;
   color: #333399 !important;
   text-align: center !important;
   margin: 0 auto !important;
   padding: 0 !important;
   transform: none !important;
-  z-index: 20 !important;
+  z-index: 15 !important;
+}
+
+/* 3. El tractor con los novios */
+.iphone .element-40 {
+  position: absolute !important;
+  top: 450px !important; /* Queda acompasado pegado abajo del nombre */
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 5 !important;
 }
 
 .iphone .element {
