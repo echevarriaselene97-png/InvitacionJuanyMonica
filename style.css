@@ -187,7 +187,6 @@
   left: calc(50.00% - 82px);
   width: 165px;
   height: 117px;
-  box-shadow: 0px 4px 4px #00000026;
   aspect-ratio: 1.41;
   background-image: url(./img/1regaloo-1.png);
   background-size: cover;
@@ -426,7 +425,6 @@
   left: calc(50.00% - 55px);
   width: 111px;
   height: 112px;
-  box-shadow: 0px 4px 4px #00000026;
   aspect-ratio: 0.99;
   background-image: url(./img/1whatsapp-1.png);
   background-size: cover;
@@ -670,9 +668,8 @@
   display: none;
 }
 
-
 /* =========================================================
-   OVERLAY / VENTANA DEL REGALO (FRAME 2)
+   OVERLAY / VENTANA DEL REGALO CORREGIDA
    ========================================================= */
 
 .overlay-backdrop {
@@ -682,121 +679,126 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
   z-index: 99999;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
 .overlay-container {
   position: relative;
+  width: 320px;
+  height: 540px;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
-  max-height: 90vh;
 }
 
 .btn-cerrar-overlay {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: -12px;
+  right: -12px;
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  font-size: 20px;
-  line-height: 30px;
+  width: 36px;
+  height: 36px;
+  font-size: 22px;
+  line-height: 34px;
   text-align: center;
   color: #333399;
   cursor: pointer;
-  z-index: 100000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 100002;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .group {
   position: relative;
-  width: 344px;
-  height: 634px;
+  width: 320px;
+  height: 520px;
 }
 
-.group .div {
-  position: absolute;
-  width: 100%;
-  height: 88.01%;
-  top: 0;
-  left: 0;
-}
-
+/* La etiqueta de fondo */
 .group .subtract {
   position: absolute;
-  width: 100%;
-  height: 89.25%;
-  top: 10.75%;
+  top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
+/* La tirita azul de arriba */
 .group .rectangle {
   position: absolute;
-  width: 8.72%;
-  height: 16.67%;
   top: 0;
-  left: 45.35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 60px;
   background-color: #333399;
+  z-index: 1;
 }
 
-.group .text-wrapper {
-  position: absolute;
-  width: 83.72%;
-  height: 23.97%;
-  top: 76.03%;
-  left: 6.69%;
-  font-family: "Bodoni Moda-BoldItalic", "Bodoni Moda", Helvetica, serif;
-  font-weight: 700;
-  font-style: italic;
-  color: #333399;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.group .lo-nico-que {
-  position: absolute;
-  width: 78.78%;
-  height: 17.35%;
-  top: 36.75%;
-  left: 9.30%;
-  font-family: "Bodoni Moda-BoldItalic", "Bodoni Moda", Helvetica, serif;
-  font-weight: 700;
-  font-style: italic;
-  color: #333399;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
+/* El aro/ojal de la etiqueta */
 .group .ellipse {
   position: absolute;
-  width: 16.57%;
-  height: 8.99%;
-  top: 13.88%;
-  left: 41.57%;
-  border-radius: 28.5px;
-  border: 5px solid;
-  border-color: #333399;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 4px solid #333399;
+  background: #ffffff;
+  z-index: 2;
 }
 
+/* Texto superior */
+.group .lo-nico-que {
+  position: absolute;
+  top: 150px;
+  left: 30px;
+  right: 30px;
+  font-family: "Bodoni Moda-BoldItalic", "Bodoni Moda", Helvetica, serif;
+  font-weight: 700;
+  font-style: italic;
+  color: #333399;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0;
+  z-index: 3;
+}
+
+/* El corazón central */
 .group .element {
   position: absolute;
-  width: 74.13%;
-  top: 307px;
-  left: 25.87%;
-  height: 142px;
-  aspect-ratio: 1.09;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: auto;
+  aspect-ratio: auto;
+  z-index: 3;
+}
+
+/* Texto inferior */
+.group .text-wrapper {
+  position: absolute;
+  bottom: 45px;
+  left: 30px;
+  right: 30px;
+  font-family: "Bodoni Moda-BoldItalic", "Bodoni Moda", Helvetica, serif;
+  font-weight: 700;
+  font-style: italic;
+  color: #333399;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0;
+  z-index: 3;
 }
