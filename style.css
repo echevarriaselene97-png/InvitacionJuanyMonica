@@ -802,3 +802,52 @@
   margin: 0;
   z-index: 3;
 }
+
+/* =========================================================
+   ANIMACIÓN DE ENTRADA SUAVE (FADE IN + FLOAT UP)
+   ========================================================= */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* El texto de bienvenida sube suave */
+.iphone .text-wrapper {
+  animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* El nombre de los novios aparece con un toque más de pausa */
+.iphone .juan-m-nica {
+  animation: fadeInUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+/* La ilustración central (los novios en el tractor) */
+.iphone .element-40 {
+  animation: fadeInUp 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+/* Las flores de la cabecera aparecen naciendo suave */
+.iphone .element,
+.iphone .element-recurso,
+.iphone .img,
+.iphone .element-2 {
+  animation: fadeInScale 1.4s ease-out 0.2s both;
+}
