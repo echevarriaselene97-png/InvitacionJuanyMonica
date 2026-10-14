@@ -896,7 +896,7 @@
 
 /* Estado inicial de las copitas: ocultas y esperando */
 .iphone .element-copitas {
-  opacity: 0;
+  opacity: 1;
   will-change: opacity, transform;
 }
 
@@ -905,15 +905,20 @@
   animation: brindisCopitas 1.3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-/* Efecto del brindis */
+/* Las copitas siempre visibles con animación suave al cargar */
+.iphone .element-copitas {
+  opacity: 1;
+  animation: brindisCopitas 1.4s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
 @keyframes brindisCopitas {
   0% {
     opacity: 0;
-    transform: translateY(35px) scale(0.85);
+    transform: translateY(30px) scale(0.85);
   }
   60% {
     opacity: 1;
-    transform: translateY(-6px) scale(1.05) rotate(-3deg);
+    transform: translateY(-5px) scale(1.05) rotate(-3deg);
   }
   80% {
     transform: translateY(0) scale(0.98) rotate(2deg);
@@ -923,7 +928,6 @@
     transform: translateY(0) scale(1) rotate(0deg);
   }
 }
-
 /* Flores inferiores de cierre */
 .iphone .element-26,
 .iphone .element-27,
