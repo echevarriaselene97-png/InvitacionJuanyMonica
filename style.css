@@ -889,3 +889,54 @@
 .overlay-container {
   animation: entradaPop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
+
+/* =========================================================
+   ANIMACIÓN DEL BRINDIS / CIERRE ("¡Te esperamos!")
+   ========================================================= */
+
+/* Efecto de brindis con leve inclinación y rebote */
+@keyframes brindisCopitas {
+  0% {
+    opacity: 0;
+    transform: translateY(25px) scale(0.85);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.05) rotate(-3deg);
+  }
+  80% {
+    transform: translateY(0) scale(0.98) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+/* Las copitas chocando */
+.iphone .element-copitas {
+  animation: brindisCopitas 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* El texto de "¡Te esperamos!" sube con fade in suave */
+.iphone .text-wrapper-6 {
+  animation: fadeInUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+}
+
+/* Flores inferiores de cierre */
+.iphone .element-26,
+.iphone .element-27,
+.iphone .element-28,
+.iphone .element-29,
+.iphone .element-30,
+.iphone .element-31,
+.iphone .element-32,
+.iphone .element-33,
+.iphone .element-34,
+.iphone .element-35,
+.iphone .element-36,
+.iphone .element-37,
+.iphone .element-38,
+.iphone .element-39 {
+  animation: fadeInScale 1.4s ease-out 0.2s both;
+}
