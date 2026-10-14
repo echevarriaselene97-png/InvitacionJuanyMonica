@@ -29,18 +29,17 @@
 
 .iphone .juan-m-nica {
   position: absolute;
-  top: 135px; /* Ajustá si querés que quede un toque más arriba o abajo del tractor */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  white-space: nowrap; /* Evita a toda costa que se parta en dos renglones */
+  top: 250px; /* Ubicación vertical justa entre la frase y el tractor */
+  left: 0;
+  width: 100%; /* Ocupa el ancho completo del frame del celular */
+  white-space: nowrap;
   font-family: "Great Vibes", cursive;
   font-weight: 400;
-  font-size: 38px; /* Tamaño ideal para que entre perfecto en pantalla móvil */
-  color: #333399; /* El azul índigo de tu paleta */
-  text-align: center;
-  line-height: 1.2;
+  font-size: 42px;
+  color: #333399;
+  text-align: center; /* Lo centra horizontalmente a la perfección */
   margin: 0;
+  padding: 0;
   z-index: 10;
 }
 
