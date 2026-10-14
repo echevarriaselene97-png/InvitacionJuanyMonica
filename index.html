@@ -211,25 +211,19 @@
     });
 
     /* 2. Observador para animar las copitas al scrollear */
-    const copitas = document.querySelector('.element-copitas');
-    const textoEsperamos = document.querySelector('.text-wrapper-6');
-
+   const copitas = document.querySelector('.element-copitas');
     if (copitas) {
       const copitasObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             copitas.classList.add('animar-copitas');
-            if (textoEsperamos) {
-              textoEsperamos.classList.add('visible');
-            }
+            copitasObserver.unobserve(copitas); // Deja de observar una vez animado
           }
         });
-      }, {
-        rootMargin: '0px 0px -40px 0px',
-        threshold: 0.15
-      });
+      }, { threshold: 0.05 }); // Se activa apenas asoma un 5% de la imagen
 
       copitasObserver.observe(copitas);
+    }
     }
   </script>
 </body>
