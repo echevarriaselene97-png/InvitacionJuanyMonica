@@ -916,21 +916,18 @@ h1.juan-m-nica {
    ANIMACIÓN DEL BRINDIS / CIERRE ("¡Te esperamos!")
    ========================================================= */
 
-/* Estado inicial de las copitas: ocultas y esperando */
+/* Estado inicial: ocultas y un poco más abajo */
 .iphone .element-copitas {
-  opacity: 1;
+  opacity: 0;
+  transform: translateY(30px) scale(0.85);
+  transition: opacity 0.3s ease;
   will-change: opacity, transform;
 }
 
-/* Solo se anima cuando entra en pantalla y recibe la clase 'animar-copitas' */
-.iphone .element-copitas.animar-copitas {
-  animation: brindisCopitas 1.3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
-
-/* Las copitas siempre visibles con animación suave al cargar */
-.iphone .element-copitas {
+/* Clase que detona la animación al scrollear */
+.iphone .element-copitas.brindar {
   opacity: 1;
-  animation: brindisCopitas 1.4s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation: brindisCopitas 1.3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 @keyframes brindisCopitas {
@@ -949,6 +946,7 @@ h1.juan-m-nica {
     opacity: 1;
     transform: translateY(0) scale(1) rotate(0deg);
   }
+
 }
 /* Flores inferiores de cierre */
 .iphone .element-26,
