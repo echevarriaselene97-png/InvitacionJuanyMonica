@@ -180,7 +180,8 @@
     </div>
   </div>
 
-  <script>
+ <script>
+    /* 1. Funcionalidad del Overlay de Regalo */
     const btnRegalo = document.getElementById('btnRegalo');
     const overlay = document.getElementById('overlayRegalo');
     const btnCerrar = document.getElementById('btnCerrarOverlay');
@@ -208,6 +209,28 @@
         cerrarOverlay();
       }
     });
+
+    /* 2. Observador para animar las copitas al scrollear */
+    const copitas = document.querySelector('.element-copitas');
+    const textoEsperamos = document.querySelector('.text-wrapper-6');
+
+    if (copitas) {
+      const copitasObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            copitas.classList.add('animar-copitas');
+            if (textoEsperamos) {
+              textoEsperamos.classList.add('visible');
+            }
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.15
+      });
+
+      copitasObserver.observe(copitas);
+    }
   </script>
 </body>
 </html>
