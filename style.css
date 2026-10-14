@@ -12,35 +12,36 @@
   margin: 0 auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 }
-
+/* 1. Texto superior de bienvenida */
+.iphone header .text-wrapper,
 .iphone .text-wrapper {
-  position: absolute;
-  top: 263px;
-  left: 121px;
-  width: 168px;
-  font-family: "Bodoni Moda-BoldItalic", "Bodoni Moda", Helvetica, serif;
-  font-weight: 700;
-  font-style: italic;
-  color: #333399;
-  font-size: 13px;
-  letter-spacing: 0;
-  line-height: normal;
+  position: absolute !important;
+  top: 175px !important; /* Lo ubica más arriba, dejando respirar la cabecera */
+  left: 0 !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 !important;
+  z-index: 15 !important;
 }
 
-.iphone .juan-m-nica {
-  position: absolute;
-  top: 250px; /* Ubicación vertical justa entre la frase y el tractor */
-  left: 0;
-  width: 100%; /* Ocupa el ancho completo del frame del celular */
-  white-space: nowrap;
-  font-family: "Great Vibes", cursive;
-  font-weight: 400;
-  font-size: 42px;
-  color: #333399;
-  text-align: center; /* Lo centra horizontalmente a la perfección */
-  margin: 0;
-  padding: 0;
-  z-index: 10;
+/* 2. Título de los novios en Great Vibes */
+.iphone .juan-m-nica,
+h1.juan-m-nica {
+  position: absolute !important;
+  top: 235px !important; /* Desciende justo debajo de la frase sin pisar el tractor */
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  white-space: nowrap !important;
+  font-family: "Great Vibes", cursive !important;
+  font-weight: 400 !important;
+  font-size: 40px !important;
+  color: #333399 !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  transform: none !important;
+  z-index: 20 !important;
 }
 
 .iphone .element {
