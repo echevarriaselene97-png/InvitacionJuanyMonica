@@ -183,6 +183,8 @@
 
  <script>
     /* 1. Funcionalidad del Overlay de Regalo */
+   <script>
+    /* Funcionalidad del Overlay de Regalo */
     const btnRegalo = document.getElementById('btnRegalo');
     const overlay = document.getElementById('overlayRegalo');
     const btnCerrar = document.getElementById('btnCerrarOverlay');
@@ -201,6 +203,7 @@
         e.preventDefault();
         abrirOverlay();
       }
+    });
 
     btnCerrar.addEventListener('click', cerrarOverlay);
 
@@ -208,28 +211,7 @@
       if (e.target === overlay) {
         cerrarOverlay();
       }
-  
- /* 2. Detector de scroll directo para las copitas */
-    const copitas = document.querySelector('.element-copitas');
-
-    function chequearCopitas() {
-      if (!copitas || copitas.classList.contains('brindar')) return;
-
-      const rect = copitas.getBoundingClientRect();
-      const ventanaAlto = window.innerHeight || document.documentElement.clientHeight;
-
-      // Se dispara apenas la parte superior de las copitas entra en el 90% inferior de la pantalla
-      if (rect.top <= ventanaAlto * 0.90 && rect.bottom >= 0) {
-        copitas.classList.add('brindar');
-        window.removeEventListener('scroll', chequearCopitas);
-      }
-    }
-
-    // Escucha el scroll global y ejecuta un chequeo inicial
-    window.addEventListener('scroll', chequearCopitas, { passive: true });
-    window.addEventListener('resize', chequearCopitas);
-    chequearCopitas();
-    }
+    });
   </script>
 </body>
 </html>
