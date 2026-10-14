@@ -201,7 +201,6 @@
         e.preventDefault();
         abrirOverlay();
       }
-    });
 
     btnCerrar.addEventListener('click', cerrarOverlay);
 
@@ -209,22 +208,27 @@
       if (e.target === overlay) {
         cerrarOverlay();
       }
-    });
+  
+ /* 2. Detector de scroll directo para las copitas */
+    const copitas = document.querySelector('.element-copitas');
 
-    /* 2. Observador para animar las copitas al scrollear */
-   const copitas = document.querySelector('.element-copitas');
-    if (copitas) {
-      const copitasObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            copitas.classList.add('animar-copitas');
-            copitasObserver.unobserve(copitas); // Deja de observar una vez animado
-          }
-        });
-      }, { threshold: 0.05 }); // Se activa apenas asoma un 5% de la imagen
+    function chequearCopitas() {
+      if (!copitas || copitas.classList.contains('brindar')) return;
 
-      copitasObserver.observe(copitas);
+      const rect = copitas.getBoundingClientRect();
+      const ventanaAlto = window.innerHeight || document.documentElement.clientHeight;
+
+      // Se dispara apenas la parte superior de las copitas entra en el 90% inferior de la pantalla
+      if (rect.top <= ventanaAlto * 0.90 && rect.bottom >= 0) {
+        copitas.classList.add('brindar');
+        window.removeEventListener('scroll', chequearCopitas);
+      }
     }
+
+    // Escucha el scroll global y ejecuta un chequeo inicial
+    window.addEventListener('scroll', chequearCopitas, { passive: true });
+    window.addEventListener('resize', chequearCopitas);
+    chequearCopitas();
     }
   </script>
 </body>
