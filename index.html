@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Invitación a la boda de Juan y Mónica">
-  <title>Juan &amp; Mónica | Invitación de boda</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Invitación a la boda de Juan y Mónica">
+  <title>Juan &amp; Mónica | Invitación de boda</title>
 
-  <!-- Fuentes de Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Great+Vibes&display=swap" rel="stylesheet">
+  <!-- Fuentes de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="globals.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="globals.css">
+  <link rel="stylesheet" href="style.css">
 
-  <style>
-   <style>
+  <style>
     /* =========================================================
-       OVERLAY DEL REGALO - FLOTANDO DIRECTO SOBRE LA WEB
+       OVERLAY DEL REGALO (CONFIGURACIÓN EXACTA)
        ========================================================= */
     .overlay-backdrop {
       display: none;
@@ -26,38 +25,31 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: transparent !important; /* Sin oscurecimiento ni tintes */
-      background-color: transparent !important;
-      backdrop-filter: none !important; /* Sin desenfoque */
+      background: transparent !important;
+      backdrop-filter: none !important;
       z-index: 99999;
       justify-content: center;
       align-items: center;
       padding: 16px;
       box-sizing: border-box;
-      pointer-events: auto;
     }
 
-    .overlay-container,
-    #overlayRegalo .modal-contenido,
-    #overlayRegalo > div {
+    .overlay-container {
       position: relative !important;
       background: transparent !important;
-      background-color: transparent !important;
       box-shadow: none !important;
       border: none !important;
-      border-radius: 0 !important;
       padding: 0 !important;
-      width: 320px !important;
-      height: 560px !important;
+      width: 350px !important;
+      height: 520px !important;
       display: flex !important;
       justify-content: center !important;
       align-items: center !important;
     }
 
-    /* Botón cerrar flotante */
     .btn-cerrar-overlay {
       position: absolute;
-      top: -20px;
+      top: -15px;
       right: 0px;
       background: #ffffff;
       border: 1px solid rgba(0, 0, 0, 0.15);
@@ -70,17 +62,17 @@
       color: #333399;
       cursor: pointer;
       z-index: 100005;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
     .group {
       position: relative !important;
-      width: 310px !important;
-      height: 530px !important;
+      width: 340px !important;
+      height: 490px !important;
       background: transparent !important;
     }
 
-    /* La silueta blanca de la etiqueta recortada flotando */
+    /* Silueta de la etiqueta (con proporciones fieles a Figma) */
     .group .subtract {
       position: absolute !important;
       top: 0 !important;
@@ -88,27 +80,29 @@
       width: 100% !important;
       height: 100% !important;
       object-fit: contain !important;
+      background: transparent !important;
+      border: none !important;
       display: block !important;
       z-index: 1 !important;
-      filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.15)); /* Sombra suave para dar el efecto de flotación */
+      filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.12));
     }
 
-    /* Cinta azul superior */
+    /* Cinta azul */
     .group .rectangle {
       position: absolute !important;
-      top: 0 !important;
+      top: -15px !important;
       left: 50% !important;
       transform: translateX(-50%) !important;
       width: 26px !important;
-      height: 65px !important;
+      height: 60px !important;
       background-color: #333399 !important;
       z-index: 2 !important;
     }
 
-    /* Ojal circular */
+    /* Ojal de la etiqueta */
     .group .ellipse {
       position: absolute !important;
-      top: 48px !important;
+      top: 32px !important;
       left: 50% !important;
       transform: translateX(-50%) !important;
       width: 44px !important;
@@ -119,13 +113,13 @@
       z-index: 3 !important;
     }
 
-    /* Frase superior */
+    /* Texto 1 */
     .group .lo-nico-que {
       position: absolute !important;
-      top: 230px !important;
-      left: 24px !important;
-      right: 24px !important;
-      width: calc(100% - 48px) !important;
+      top: 160px !important;
+      left: 25px !important;
+      right: 25px !important;
+      width: calc(100% - 50px) !important;
       font-family: "Bodoni Moda-BoldItalic", "Bodoni Moda", serif !important;
       font-weight: 700 !important;
       font-style: italic !important;
@@ -141,10 +135,10 @@
     .group .corazon-regalo,
     .group img.element {
       position: absolute !important;
-      top: 295px !important;
+      top: 245px !important;
       left: 50% !important;
       transform: translateX(-50%) !important;
-      width: 135px !important;
+      width: 145px !important;
       height: auto !important;
       object-fit: contain !important;
       display: block !important;
@@ -153,10 +147,10 @@
       z-index: 4 !important;
     }
 
-    /* Frase inferior */
+    /* Texto 2 */
     .group .text-wrapper {
       position: absolute !important;
-      top: 445px !important;
+      top: 405px !important;
       bottom: auto !important;
       left: 20px !important;
       right: 20px !important;
@@ -165,7 +159,7 @@
       font-weight: 700 !important;
       font-style: italic !important;
       color: #333399 !important;
-      font-size: 14.5px !important;
+      font-size: 14px !important;
       text-align: center !important;
       line-height: 1.35 !important;
       margin: 0 auto !important;
@@ -176,160 +170,159 @@
       cursor: pointer;
     }
   </style>
-
 </head>
 <body>
-  <main class="iphone">
-    <header>
-      <p class="text-wrapper">Estás invitado a la boda de</p>
-      <h1 class="juan-m-nica">Juan &amp; Mónica</h1>
-      <img class="element" src="img/1recurso-5.png" alt="">
-      <img class="element-recurso" src="img/1recurso-6.png" alt="">
-      <img class="img" src="img/1recurso-6.png" alt="">
-      <img class="element-2" src="img/1recurso-6.png" alt="">
-      <img class="element-40" src="img/1recurso-2.png" alt="">
-    </header>
+  <main class="iphone">
+    <header>
+      <p class="text-wrapper">Estás invitado a la boda de</p>
+      <h1 class="juan-m-nica">Juan &amp; Mónica</h1>
+      <img class="element" src="img/1recurso-5.png" alt="">
+      <img class="element-recurso" src="img/1recurso-6.png" alt="">
+      <img class="img" src="img/1recurso-6.png" alt="">
+      <img class="element-2" src="img/1recurso-6.png" alt="">
+      <img class="element-40" src="img/1recurso-2.png" alt="">
+    </header>
 
-    <section aria-labelledby="story-heading">
-      <h2 id="story-heading" class="despu-s-de-a-os">
-        Después de 27 años compartiendo <br>
-        la vida, hoy celebramos la suerte <br>
-        de seguir escribiéndola juntos.
-      </h2>
-      <img class="element-3" src="img/1recurso-1.png" alt="">
-      <img class="element-4" src="img/1recurso-6.png" alt="">
-      <img class="element-5" src="img/1recurso-6.png" alt="">
-      <img class="element-6" src="img/1recurso-6.png" alt="">
-      <img class="element-7" src="img/1recurso-6.png" alt="">
-      <img class="element-8" src="img/1recurso-6.png" alt="">
-      <img class="element-9" src="img/1recurso-6.png" alt="">
-      <img class="element-10" src="img/1recurso-5.png" alt="">
-    </section>
+    <section aria-labelledby="story-heading">
+      <h2 id="story-heading" class="despu-s-de-a-os">
+        Después de 27 años compartiendo <br>
+        la vida, hoy celebramos la suerte <br>
+        de seguir escribiéndola juntos.
+      </h2>
+      <img class="element-3" src="img/1recurso-1.png" alt="">
+      <img class="element-4" src="img/1recurso-6.png" alt="">
+      <img class="element-5" src="img/1recurso-6.png" alt="">
+      <img class="element-6" src="img/1recurso-6.png" alt="">
+      <img class="element-7" src="img/1recurso-6.png" alt="">
+      <img class="element-8" src="img/1recurso-6.png" alt="">
+      <img class="element-9" src="img/1recurso-6.png" alt="">
+      <img class="element-10" src="img/1recurso-5.png" alt="">
+    </section>
 
-    <section aria-labelledby="event-heading">
-      <h2 id="event-heading" class="div">
-        <time datetime="2026-12-19">Diciembre 19, 2026</time>
-      </h2>
-      <img class="element-calendario" src="img/1calendario-1.png" alt="">
-      <p class="text-wrapper-2">
-        <time datetime="22:00">22 horas</time>
-      </p>
-      <img class="element-reloj" src="img/1reloj-1-1.png" alt="">
-      <address class="text-wrapper-3">Salón “Las Farolas”</address>
-      <img class="element-unicacion" src="img/1unicacion-1.png" alt="">
-      <img class="element-25" src="img/1recurso-5.png" alt="">
-      <img class="element-mapa" src="img/1mapa-1.png" alt="Mapa de ubicación del Salón Las Farolas">
-    </section>
+    <section aria-labelledby="event-heading">
+      <h2 id="event-heading" class="div">
+        <time datetime="2026-12-19">Diciembre 19, 2026</time>
+      </h2>
+      <img class="element-calendario" src="img/1calendario-1.png" alt="">
+      <p class="text-wrapper-2">
+        <time datetime="22:00">22 horas</time>
+      </p>
+      <img class="element-reloj" src="img/1reloj-1-1.png" alt="">
+      <address class="text-wrapper-3">Salón “Las Farolas”</address>
+      <img class="element-unicacion" src="img/1unicacion-1.png" alt="">
+      <img class="element-25" src="img/1recurso-5.png" alt="">
+      <img class="element-mapa" src="img/1mapa-1.png" alt="Mapa de ubicación del Salón Las Farolas">
+    </section>
 
-    <section aria-labelledby="gift-heading">
-      <h2 id="gift-heading" class="text-wrapper-5">¿Qué nos podes regalar?</h2>
-      <div id="btnRegalo" class="element-regaloo" role="button" tabindex="0" aria-label="Ver sugerencia de regalo"></div>
-      <img class="element-11" src="img/1recurso-6.png" alt="">
-      <img class="element-12" src="img/1recurso-6.png" alt="">
-      <img class="element-13" src="img/1recurso-6.png" alt="">
-      <img class="element-14" src="img/1recurso-6.png" alt="">
-      <img class="element-15" src="img/1recurso-6.png" alt="">
-      <img class="element-16" src="img/1recurso-6.png" alt="">
-      <img class="element-17" src="img/1recurso-6.png" alt="">
-      <img class="element-18" src="img/1recurso-6.png" alt="">
-      <img class="element-19" src="img/1recurso-6.png" alt="">
-      <img class="element-20" src="img/1recurso-6.png" alt="">
-      <img class="element-21" src="img/1recurso-5.png" alt="">
-      <img class="element-22" src="img/1recurso-5.png" alt="">
-      <img class="element-23" src="img/1recurso-5.png" alt="">
-      <img class="element-24" src="img/1recurso-5.png" alt="">
-    </section>
+    <section aria-labelledby="gift-heading">
+      <h2 id="gift-heading" class="text-wrapper-5">¿Qué nos podes regalar?</h2>
+      <div id="btnRegalo" class="element-regaloo" role="button" tabindex="0" aria-label="Ver sugerencia de regalo"></div>
+      <img class="element-11" src="img/1recurso-6.png" alt="">
+      <img class="element-12" src="img/1recurso-6.png" alt="">
+      <img class="element-13" src="img/1recurso-6.png" alt="">
+      <img class="element-14" src="img/1recurso-6.png" alt="">
+      <img class="element-15" src="img/1recurso-6.png" alt="">
+      <img class="element-16" src="img/1recurso-6.png" alt="">
+      <img class="element-17" src="img/1recurso-6.png" alt="">
+      <img class="element-18" src="img/1recurso-6.png" alt="">
+      <img class="element-19" src="img/1recurso-6.png" alt="">
+      <img class="element-20" src="img/1recurso-6.png" alt="">
+      <img class="element-21" src="img/1recurso-5.png" alt="">
+      <img class="element-22" src="img/1recurso-5.png" alt="">
+      <img class="element-23" src="img/1recurso-5.png" alt="">
+      <img class="element-24" src="img/1recurso-5.png" alt="">
+    </section>
 
-    <section aria-labelledby="rsvp-heading">
-      <a
-        class="element-whatsapp"
-        href="https://wa.me/5493434736641"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Confirmar asistencia por WhatsApp"
-      ></a>
-      <p id="rsvp-heading" class="confirma-tu">
-        <span class="span">
-          Confirma tu asistencia <br>
-          hasta el
-        </span>
-        <span class="text-wrapper-4">30 de Octubre</span>
-      </p>
-    </section>
+    <section aria-labelledby="rsvp-heading">
+      <a
+        class="element-whatsapp"
+        href="https://wa.me/5493434736641"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Confirmar asistencia por WhatsApp"
+      ></a>
+      <p id="rsvp-heading" class="confirma-tu">
+        <span class="span">
+          Confirma tu asistencia <br>
+          hasta el
+        </span>
+        <span class="text-wrapper-4">30 de Octubre</span>
+      </p>
+    </section>
 
-    <footer aria-labelledby="closing-heading">
-      <h2 id="closing-heading" class="text-wrapper-6">¡Te esperamos!</h2>
-      <img class="element-copitas" src="img/1copitas-1.png" alt="">
-      <img class="element-26" src="img/1recurso-6.png" alt="">
-      <img class="element-27" src="img/1recurso-6.png" alt="">
-      <img class="element-28" src="img/1recurso-6.png" alt="">
-      <img class="element-29" src="img/1recurso-6.png" alt="">
-      <img class="element-30" src="img/1recurso-6.png" alt="">
-      <img class="element-31" src="img/1recurso-5.png" alt="">
-      <img class="element-32" src="img/1recurso-5.png" alt="">
-      <img class="element-33" src="img/1recurso-6.png" alt="">
-      <img class="element-34" src="img/1recurso-6.png" alt="">
-      <img class="element-35" src="img/1recurso-6.png" alt="">
-      <img class="element-36" src="img/1recurso-6.png" alt="">
-      <img class="element-37" src="img/1recurso-6.png" alt="">
-      <img class="element-38" src="img/1recurso-5.png" alt="">
-      <img class="element-39" src="img/1recurso-5.png" alt="">
-    </footer>
-  </main>
-  
-<!-- MODAL / OVERLAY DEL REGALO -->
-  <div id="overlayRegalo" class="overlay-backdrop">
-    <div class="overlay-container">
-      <button type="button" id="btnCerrarOverlay" class="btn-cerrar-overlay" aria-label="Cerrar ventana">&times;</button>
-      
-      <div class="group">
-        <div class="div">
-          <img class="subtract" src="img/subtract.png" alt="" />
-          <div class="rectangle"></div>
-        </div>
-        <p class="text-wrapper">Pero si quisieras hacernos algún regalo podes hacerlo con libre elección.</p>
-        <p class="lo-nico-que">¡Lo único que necesitamos es que nos&nbsp;&nbsp;acompañes y disfrutes con nosotros!</p>
-        <div class="ellipse"></div>
-        <img class="corazon-regalo" src="img/1corazom-1.png" alt="" />
-      </div>
-    </div>
-  </div>
+    <footer aria-labelledby="closing-heading">
+      <h2 id="closing-heading" class="text-wrapper-6">¡Te esperamos!</h2>
+      <img class="element-copitas" src="img/1copitas-1.png" alt="">
+      <img class="element-26" src="img/1recurso-6.png" alt="">
+      <img class="element-27" src="img/1recurso-6.png" alt="">
+      <img class="element-28" src="img/1recurso-6.png" alt="">
+      <img class="element-29" src="img/1recurso-6.png" alt="">
+      <img class="element-30" src="img/1recurso-6.png" alt="">
+      <img class="element-31" src="img/1recurso-5.png" alt="">
+      <img class="element-32" src="img/1recurso-5.png" alt="">
+      <img class="element-33" src="img/1recurso-6.png" alt="">
+      <img class="element-34" src="img/1recurso-6.png" alt="">
+      <img class="element-35" src="img/1recurso-6.png" alt="">
+      <img class="element-36" src="img/1recurso-6.png" alt="">
+      <img class="element-37" src="img/1recurso-6.png" alt="">
+      <img class="element-38" src="img/1recurso-5.png" alt="">
+      <img class="element-39" src="img/1recurso-5.png" alt="">
+    </footer>
+  </main>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const btnRegalo = document.getElementById('btnRegalo');
-      const overlay = document.getElementById('overlayRegalo');
-      const btnCerrar = document.getElementById('btnCerrarOverlay');
+  <!-- MODAL / OVERLAY DEL REGALO -->
+  <div id="overlayRegalo" class="overlay-backdrop">
+    <div class="overlay-container">
+      <button type="button" id="btnCerrarOverlay" class="btn-cerrar-overlay" aria-label="Cerrar ventana">&times;</button>
+      
+      <div class="group">
+        <div class="div">
+          <img class="subtract" src="img/subtract.png" alt="" />
+          <div class="rectangle"></div>
+        </div>
+        <p class="text-wrapper">Pero si quisieras hacernos algún regalo podes hacerlo con libre elección.</p>
+        <p class="lo-nico-que">¡Lo único que necesitamos es que nos&nbsp;acompañes y disfrutes con nosotros!</p>
+        <div class="ellipse"></div>
+        <img class="corazon-regalo" src="img/1corazom-1.png" alt="" />
+      </div>
+    </div>
+  </div>
 
-      function abrirOverlay(e) {
-        if (e) e.preventDefault();
-        overlay.style.display = 'flex';
-      }
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btnRegalo = document.getElementById('btnRegalo');
+      const overlay = document.getElementById('overlayRegalo');
+      const btnCerrar = document.getElementById('btnCerrarOverlay');
 
-      function cerrarOverlay(e) {
-        if (e) e.preventDefault();
-        overlay.style.display = 'none';
-      }
+      function abrirOverlay(e) {
+        if (e) e.preventDefault();
+        overlay.style.display = 'flex';
+      }
 
-      if (btnRegalo && overlay) {
-        btnRegalo.addEventListener('click', abrirOverlay);
-        btnRegalo.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            abrirOverlay(e);
-          }
-        });
+      function cerrarOverlay(e) {
+        if (e) e.preventDefault();
+        overlay.style.display = 'none';
+      }
 
-        if (btnCerrar) {
-          btnCerrar.addEventListener('click', cerrarOverlay);
-        }
+      if (btnRegalo && overlay) {
+        btnRegalo.addEventListener('click', abrirOverlay);
+        btnRegalo.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            abrirOverlay(e);
+          }
+        });
 
-        overlay.addEventListener('click', (e) => {
-          if (e.target === overlay) {
-            cerrarOverlay(e);
-          }
-        });
-      }
-    });
-  </script>
+        if (btnCerrar) {
+          btnCerrar.addEventListener('click', cerrarOverlay);
+        }
+
+        overlay.addEventListener('click', (e) => {
+          if (e.target === overlay) {
+            cerrarOverlay(e);
+          }
+        });
+      }
+    });
+  </script>
 </body>
-</html>   
+</html>
