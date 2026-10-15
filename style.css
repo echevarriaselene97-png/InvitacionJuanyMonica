@@ -959,3 +959,116 @@ h1.juan-m-nica {
 .iphone .element-39 {
   animation: fadeInScale 1.4s ease-out 0.2s both;
 }
+/* =========================================================
+   PROPORCIONES REALES DE LA ETIQUETA (FIGMA)
+   ========================================================= */
+
+.overlay-container {
+  position: relative !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  width: 360px !important;
+  height: 520px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.group {
+  position: relative !important;
+  width: 340px !important; /* Más ancha para que no se comprima en punta */
+  height: 480px !important;
+  background: transparent !important;
+}
+
+/* 1. Silueta de la etiqueta (mantiene su proporción natural) */
+.group .subtract {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  border: none !important;
+  z-index: 1 !important;
+}
+
+/* 2. Cinta azul superior */
+.group .rectangle {
+  position: absolute !important;
+  top: -15px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 26px !important;
+  height: 60px !important;
+  background-color: #333399 !important;
+  z-index: 2 !important;
+}
+
+/* 3. Ojal blanco con borde azul */
+.group .ellipse {
+  position: absolute !important;
+  top: 32px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  border: 3.5px solid #333399 !important;
+  background: #ffffff !important;
+  z-index: 3 !important;
+}
+
+/* 4. Frase superior: "¡Lo único que necesitamos..." */
+.group .lo-nico-que {
+  position: absolute !important;
+  top: 150px !important;
+  left: 25px !important;
+  right: 25px !important;
+  width: calc(100% - 50px) !important;
+  font-family: "Bodoni Moda-BoldItalic", "Bodoni Moda", serif !important;
+  font-weight: 700 !important;
+  font-style: italic !important;
+  color: #333399 !important;
+  font-size: 15px !important;
+  text-align: center !important;
+  line-height: 1.35 !important;
+  margin: 0 auto !important;
+  z-index: 4 !important;
+}
+
+/* 5. Corazón central */
+.group .corazon-regalo,
+.group img.element {
+  position: absolute !important;
+  top: 235px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 145px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  z-index: 4 !important;
+}
+
+/* 6. Frase inferior: "Pero si quisieras hacernos..." */
+.group .text-wrapper {
+  position: absolute !important;
+  top: 395px !important;
+  bottom: auto !important;
+  left: 20px !important;
+  right: 20px !important;
+  width: calc(100% - 40px) !important;
+  font-family: "Bodoni Moda-BoldItalic", "Bodoni Moda", serif !important;
+  font-weight: 700 !important;
+  font-style: italic !important;
+  color: #333399 !important;
+  font-size: 14.5px !important;
+  text-align: center !important;
+  line-height: 1.35 !important;
+  margin: 0 auto !important;
+  z-index: 4 !important;
+}
