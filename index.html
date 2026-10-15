@@ -162,8 +162,8 @@
       <img class="element-39" src="img/1recurso-5.png" alt="">
     </footer>
   </main>
-
-  <!-- MODAL / OVERLAY DEL REGALO -->
+  
+<!-- MODAL / OVERLAY DEL REGALO -->
   <div id="overlayRegalo" class="overlay-backdrop">
     <div class="overlay-container">
       <button type="button" id="btnCerrarOverlay" class="btn-cerrar-overlay" aria-label="Cerrar ventana">&times;</button>
@@ -176,40 +176,44 @@
         <p class="text-wrapper">Pero si quisieras hacernos algún regalo podes hacerlo con libre elección.</p>
         <p class="lo-nico-que">¡Lo único que necesitamos es que nos&nbsp;&nbsp;acompañes y disfrutes con nosotros!</p>
         <div class="ellipse"></div>
-        <img class="element" src="img/1corazom-1.png" alt="" />
+        <img class="corazon-regalo" src="img/1corazom-1.png" alt="" />
       </div>
     </div>
   </div>
 
- <script>
-    /* 1. Funcionalidad del Overlay de Regalo */
-   <script>
-    /* Funcionalidad del Overlay de Regalo */
-    const btnRegalo = document.getElementById('btnRegalo');
-    const overlay = document.getElementById('overlayRegalo');
-    const btnCerrar = document.getElementById('btnCerrarOverlay');
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btnRegalo = document.getElementById('btnRegalo');
+      const overlay = document.getElementById('overlayRegalo');
+      const btnCerrar = document.getElementById('btnCerrarOverlay');
 
-    function abrirOverlay() {
-      overlay.style.display = 'flex';
-    }
-
-    function cerrarOverlay() {
-      overlay.style.display = 'none';
-    }
-
-    btnRegalo.addEventListener('click', abrirOverlay);
-    btnRegalo.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        abrirOverlay();
+      function abrirOverlay(e) {
+        if (e) e.preventDefault();
+        overlay.style.display = 'flex';
       }
-    });
 
-    btnCerrar.addEventListener('click', cerrarOverlay);
+      function cerrarOverlay(e) {
+        if (e) e.preventDefault();
+        overlay.style.display = 'none';
+      }
 
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) {
-        cerrarOverlay();
+      if (btnRegalo && overlay) {
+        btnRegalo.addEventListener('click', abrirOverlay);
+        btnRegalo.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            abrirOverlay(e);
+          }
+        });
+
+        if (btnCerrar) {
+          btnCerrar.addEventListener('click', cerrarOverlay);
+        }
+
+        overlay.addEventListener('click', (e) => {
+          if (e.target === overlay) {
+            cerrarOverlay(e);
+          }
+        });
       }
     });
   </script>
