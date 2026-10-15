@@ -693,9 +693,6 @@ h1.juan-m-nica {
 /* =========================================================
    OVERLAY / VENTANA DEL REGALO CORREGIDA
    ========================================================= */
-/* =========================================================
-   OVERLAY / VENTANA DEL REGALO CORREGIDA
-   ========================================================= */
 
 /* Fondo oscuro de pantalla completa */
 .overlay-backdrop {
@@ -914,72 +911,6 @@ h1.juan-m-nica {
   animation: pulsoBoton 2s infinite ease-in-out;
 }
 
-
-/* =========================================================
-   ESTRUCTURA Y VISIBILIDAD DEL MODAL / OVERLAY DE REGALO
-   ========================================================= */
-
-/* Fondo oscuro que cubre toda la pantalla */
-#overlayRegalo {
-  display: none; /* Se activa con flex desde JS */
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  background-color: rgba(0, 0, 0, 0.6) !important; /* Oscurece el fondo */
-  z-index: 99999 !important; /* Pasa por encima de todo el resto */
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 20px !important;
-  box-sizing: border-box !important;
-}
-
-/* Tarjeta blanca interior (donde vive la imagen y el texto) */
-#overlayRegalo .modal-contenido,
-#overlayRegalo > div {
-  position: relative !important;
-  background-color: #ffffff !important;
-  color: #333333 !important; /* Fuerza color de texto oscuro y legible */
-  border-radius: 16px !important;
-  padding: 30px 20px !important;
-  max-width: 360px !important;
-  width: 90% !important;
-  text-align: center !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
-  z-index: 100000 !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Fuerza que las imágenes dentro del modal se vean nítidas y no desaparezcan */
-#overlayRegalo img {
-  display: block !important;
-  max-width: 100% !important;
-  height: auto !important;
-  margin: 0 auto 15px auto !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  mix-blend-mode: normal !important; /* Evita que el blend-mode de las flores las borre */
-}
-
-/* Fuerza que todos los textos dentro del modal sean visibles */
-#overlayRegalo h2,
-#overlayRegalo h3,
-#overlayRegalo p,
-#overlayRegalo span {
-  opacity: 1 !important;
-  visibility: visible !important;
-  color: #333333 !important;
-  line-height: 1.5 !important;
-  margin-bottom: 10px !important;
-}
-
-/* Botón de cerrar (la cruz o el botón) */
-#btnCerrarOverlay {
-  cursor: pointer !important;
-  z-index: 100001 !important;
-}
 
 /* =========================================================
    ANIMACIÓN NATIVA DE COPITAS AL SCROLLEAR (SIN JS)
